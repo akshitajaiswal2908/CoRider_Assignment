@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<br>
+<h1>HOME PAGE</h1>
+<br>
+<main role="main" class="container">
+  <div class="jumbotron" style="background-color: #e9ecef; padding: 64px 32px;">
+    <h1>Welcome</h1>
+    <p class="lead">
+      Welcome to Akshita's User Management System!!!
+      This application allows you to create, read, update, and delete user records.
+      You can manage user data efficiently using Flask and MongoDB.
+    </p>
+    <a class="btn btn-lg btn-primary" href="/users" role="button">Manage Users &raquo;</a>
+  </div>
+</main>
+{% endblock %}
