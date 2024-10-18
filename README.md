@@ -21,8 +21,8 @@ This is a basic Flask application that demonstrates CRUD (Create, Read, Update, 
 1. **Clone the repository:**
 
    ```
-   git clone <repository_url>
-   cd <repository_name>
+   git clone git@github.com:akshitajaiswal2908/CoRider_Assignment.git
+   cd CoRider_Assignment
 
 2. **Install dependencies:**
 
@@ -35,10 +35,10 @@ This is a basic Flask application that demonstrates CRUD (Create, Read, Update, 
 
     ```
     mongod
-
+    ```
     Alternatively,if you want to run MongoDB using Docker, use the following command:
 
-    ```bash
+    ```
     docker run --name mongodb -d -p 27017:27017 mongo
 
 4. ***Run the application:***
@@ -51,6 +51,8 @@ This is a basic Flask application that demonstrates CRUD (Create, Read, Update, 
     set FLASK_DEBUG=True 
     flask run
 
+    ```
+    
     If using Docker, you can run your Flask application in a Docker container as follows:
 
     ```
