@@ -40,6 +40,8 @@ def edit_user(id):
     if not user:
         return render_template('error.html', message='User not found'), 404
 
+    print(user)
+    
     if request.method == 'POST':
         name = request.form.get('name')
         email = request.form.get('email')

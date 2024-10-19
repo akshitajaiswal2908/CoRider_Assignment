@@ -7,7 +7,7 @@
 {% block body %}
 <h1>Edit User</h1>
 <hr>
-<form action="{{ url_for('user_blueprint.edit_user', id=user.id) }}" method="POST">
+<form action="/users/edit/{{user._id}}" method="POST">
     <label for="name">Name:</label>
     <input class="form-control" type="text" name="name" id="name" value="{{ user.name }}" aria-label="Enter Name" required />
     <br />
@@ -20,5 +20,4 @@
     <input class="btn btn-success" type="submit" value="Save" />
 </form>
 <hr>
-<p>Form action URL: {{ url_for('user_blueprint.edit_user', id=user.id) }}</p>
 {% endblock %}
