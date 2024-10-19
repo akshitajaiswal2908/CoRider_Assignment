@@ -11,13 +11,13 @@ This is a basic Flask application that demonstrates CRUD (Create, Read, Update, 
   
 - **Read**: View existing users.
   - **GET /users**: Returns a list of all users.
-  - **GET /users/<id>**: Returns the user with the specified ID.
+  - **GET /users/< id>**: Returns the user with the specified ID.
   
 - **Update**: Modify user details.
-  - **PUT /users/<id>**: Updates the user with the specified ID with the new data.
+  - **PUT /users/< id>**: Updates the user with the specified ID with the new data.
   
 - **Delete**: Remove users from the database.
-  - **DELETE /users/<id>**: Deletes the user with the specified ID.
+  - **DELETE /users/< id>**: Deletes the user with the specified ID.
 
 ### Prerequisites
 
