@@ -44,38 +44,18 @@ This is a basic Flask application that demonstrates CRUD (Create, Read, Update, 
     ```
     mongod
     ```
-    Alternatively,if you want to run MongoDB using Docker, use the following command:
-
-    ```
-    docker run --name mongodb -d -p 27017:27017 mongo
-
 4. ***Run the application:***
 
     Set the environment variable and run the Flask application:
-
     ```
-
     set FLASK_APP=run.py
     set FLASK_DEBUG=True 
     flask run
-
     ```
-    
-    If using Docker, you can run your Flask application in a Docker container as follows:
-
-    ```
-
-    docker build -t flask-crud-app .
-    docker run -d -p 5000:5000 --link mongodb:mongo flask-crud-app
 
 5. ***Open a browser and navigate to:***
-
-
     ```
     http://127.0.0.1:5000
+    ```
 
-6. ***When you're done working with your Flask application and MongoDB, you can close them using the following steps:***
-   ```
 
-   docker stop flask-crud-app
-   docker stop mongodb
