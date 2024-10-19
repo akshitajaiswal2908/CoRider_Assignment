@@ -5,16 +5,42 @@
 {% endblock %}
 
 {% block body %}
+
+<script>
+    function deleteUser(userId) {
+        if(confirm('Are you sure you want to delete this user?')) {
+            fetch(`/users/${userId}`, {
+                method: 'DELETE'
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = '/home/users';
+                } else {
+                    alert('Failed to delete the user.');
+                }
+            })
+            .catch(error => {
+                alert('An error occurred while deleting the user.');
+            });
+        }
+    }
+</script>
+
+
 <h1 style="display: inline;">All Users</h1>
-<a style="display: inline;" class="btn btn-success float-end" href="/users/new">+ NEW USER</a>
+<a style="display: inline;" class="btn btn-success float-end" href="/home/users/new">+ NEW USER</a>
 <hr>
 {% for user in users %}
 <div class="user-item">
     <h2>{{ user.name }}</h2>
     <p>Email: {{ user.email }}</p>
-    <a class="btn btn-danger" href="/users/delete/{{ user.id }}">DELETE</a>
-    <a class="btn btn-primary" href="/users/edit/{{ user.id }}">EDIT</a>
+    <a class="btn btn-danger" onclick="deleteUser('{{ user.id }}')">DELETE</a>
+    <a class="btn btn-primary" href="/home/users/edit/{{ user.id }}">EDIT</a>
     <hr>
 </div>
 {% endfor %}
 {% endblock %}
+
+
+
+

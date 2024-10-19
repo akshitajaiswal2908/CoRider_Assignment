@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_pymongo import PyMongo
 from app.config import Config
-import logging
 
 mongo = PyMongo()
 
@@ -9,8 +8,6 @@ def create_app():
   
     app = Flask(__name__)
     app.config.from_object(Config)
-
-    logging.basicConfig(level=logging.DEBUG)
 
     mongo.init_app(app)
 
