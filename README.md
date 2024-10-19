@@ -58,4 +58,8 @@ This is a basic Flask application that demonstrates CRUD (Create, Read, Update, 
     http://127.0.0.1:5000
     ```
 
-
+6. ***If you are using Docker: ***
+     ```
+     docker-compose up --build
+     
+     ```
