@@ -36,7 +36,7 @@ def create_user():
 
 @user_blueprint.route('/users/edit/<id>', methods=['GET', 'POST'])
 def edit_user(id):
-    user = mongo.db.users.find_one({'_id': ObjectId(id)})  # Convert id to ObjectId
+    user = mongo.db.users.find_one({'_id': ObjectId(id)})  
     if not user:
         return render_template('error.html', message='User not found'), 404
 
@@ -54,7 +54,7 @@ def edit_user(id):
             update_data['password'] = generate_password_hash(password, method='pbkdf2:sha256')
 
         mongo.db.users.update_one({'_id': ObjectId(id)}, {'$set': update_data})
-        return redirect('/users')  # Ensure the redirect points to /users
+        return redirect('/users')  
 
     return render_template('edit_users.html', user=user)
 
